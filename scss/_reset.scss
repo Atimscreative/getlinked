@@ -1,0 +1,176 @@
+// IMPORT OTHER SCSS FILES
+@import "_variables";
+@import "_mixins";
+
+/*====== BASE STYLES ======*/
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: $body;
+  background: $secondary;
+  color: $text;
+  counter-reset: my-counter;
+}
+
+section,
+div {
+  position: relative;
+}
+
+a {
+  text-decoration: none;
+  color: $text;
+}
+
+h1,
+h2,
+h3 {
+  font-family: $body;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/*====== SECTIONS ======*/
+main {
+  overflow: hidden;
+}
+
+.section {
+  display: flex;
+  flex-wrap: wrap;
+
+  @include minMQ(992px) {
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+.section-img-box {
+  width: 100%;
+
+  @include minMQ(567px) {
+    padding: 0 30px;
+  }
+
+  @include minMQ(768px) {
+    width: 70%;
+    padding: 0;
+    margin-inline: auto;
+  }
+
+  @include minMQ(992px) {
+    height: 450px;
+  }
+}
+
+.section-img {
+  width: 100%;
+  height: 100%;
+  padding: 30px;
+
+  @include minMQ(768px) {
+    padding: 0;
+  }
+}
+
+.section-content {
+  width: 100%;
+  text-align: center;
+
+  @include minMQ(768px) {
+    width: 90%;
+    margin-inline: auto;
+  }
+
+  @include minMQ(992px) {
+    text-align: left;
+    margin: 0;
+  }
+}
+
+.section-img-box,
+.section-content {
+  @include minMQ(992px) {
+    width: calc(50% - 20px);
+    margin: 0;
+  }
+}
+
+.section-heading {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.section-title {
+  font-family: $heading;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.3;
+  margin-bottom: 2px;
+
+  @include minMQ(768px) {
+    font-size: 32px;
+  }
+}
+
+.section-sub-title {
+  color: $color2;
+}
+
+.section-text {
+  font-size: 13px;
+  line-height: 24px;
+
+  @include minMQ(768px) {
+    font-size: 14px;
+  }
+}
+
+.glow {
+  width: 300px;
+  height: 200px;
+  position: absolute;
+  mix-blend-mode: hard-light;
+}
+
+/*====== CONTAINER ======*/
+.container {
+  width: 100%;
+  padding-left: 16px;
+  padding-right: 16px;
+  margin: 0 auto;
+
+  @include maxMQ(576px) {
+    max-width: 100%;
+  }
+
+  @include minMQ(576px) {
+    max-width: 560px;
+  }
+
+  @include minMQ(768px) {
+    max-width: 720px;
+  }
+
+  @include minMQ(992px) {
+    max-width: 960px;
+  }
+
+  @include minMQ(1200px) {
+    max-width: 1140px;
+  }
+
+  @include minMQ(1400px) {
+    max-width: 1320px;
+  }
+}
