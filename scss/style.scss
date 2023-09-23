@@ -1366,6 +1366,18 @@
     .open-menu {
       display: none;
     }
+
+    @include minMQ(992px) {
+      .logo,
+      .nav-menu,
+      .open-menu {
+        display: block;
+      }
+
+      .open-menu {
+        display: none;
+      }
+    }
   }
 
   .outer-back {
@@ -1499,11 +1511,16 @@
   }
 
   @include minMQ(992px) {
+    .outer-back {
+      display: none;
+    }
+
     .contact {
       width: 100%;
       display: flex;
       justify-content: space-between;
       align-items: flex-start;
+      padding-top: 50px;
     }
 
     .contact-content {
@@ -1670,7 +1687,6 @@
 
   .connect {
     display: inline-flex;
-    /* justify-content: center; */
     align-items: center;
     margin-top: 20px;
   }
@@ -1705,7 +1721,6 @@
   }
 
   .contact-info > .bx {
-    /* margin-top: 2px; */
     font-size: 16px;
   }
 

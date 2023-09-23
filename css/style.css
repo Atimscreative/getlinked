@@ -1655,6 +1655,16 @@ main {
 #contact-page .header .open-menu {
   display: none;
 }
+@media screen and (min-width: 992px) {
+  #contact-page .header .logo,
+  #contact-page .header .nav-menu,
+  #contact-page .header .open-menu {
+    display: block;
+  }
+  #contact-page .header .open-menu {
+    display: none;
+  }
+}
 #contact-page .outer-back {
   height: 40px;
   width: 40px;
@@ -1819,6 +1829,9 @@ main {
   margin-inline: 5px;
 }
 @media screen and (min-width: 992px) {
+  #contact-page .outer-back {
+    display: none;
+  }
   #contact-page .contact {
     width: 100%;
     display: -webkit-box;
@@ -1830,6 +1843,7 @@ main {
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: flex-start;
+    padding-top: 50px;
   }
   #contact-page .contact-content {
     display: block;
@@ -1992,7 +2006,6 @@ main {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  /* justify-content: center; */
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -2025,7 +2038,6 @@ main {
   gap: 10px;
 }
 #footer .contact-info > .bx {
-  /* margin-top: 2px; */
   font-size: 16px;
 }
 #footer .address {
